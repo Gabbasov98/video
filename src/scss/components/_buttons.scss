@@ -1,0 +1,32 @@
+@import "../vars";
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out .3s;
+    padding: 0;
+    border-radius: 6px;
+    font-weight: 500;
+    font-family: $font2;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-blue{
+    background-color: $primary;
+    color: #fff;
+    &:hover{
+        background-color: $primaryHover;
+        color: #fff;
+    }
+}
+
+.btn-green{
+    background-color: $green;
+    color: #fff;
+    &:hover{
+        background-color: $greenHover;
+        color: #fff;
+    }
+}

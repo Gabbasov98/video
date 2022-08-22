@@ -1,0 +1,7 @@
+@import '../_mixins';
+@include font-face('Manrope', 'Manrope-Regular', 400);
+@include font-face('Manrope', 'Manrope-ExtraBold', 800);
+@include font-face('Jost', 'Jost-Regular', 400);
+@include font-face('Jost', 'Jost-Medium', 500);
+@include font-face('Jost', 'Jost-SemiBold', 600);
+@include font-face('Jost', 'Jost-Bold', 700);

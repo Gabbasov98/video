@@ -1,0 +1,112 @@
+@import "../vars";
+.display1,
+.display3,
+.display4{
+  font-weight: 600;
+  line-height: 130%;
+  font-family: $font2;
+}
+
+.display1{
+  font-size: 44px;
+}
+
+.display3{
+  font-size: 28px;
+}
+
+.display4{
+  font-size: 22px;
+}
+
+.body-text-big,
+.body-text{
+  color: $grayText;
+  line-height: 160%;
+  mark{
+    font-weight: 800;
+    background-color: transparent;
+    color: $primary;
+  }
+}
+
+.body-text{
+  font-size: 18px;
+}
+
+.body-text-big{
+  font-size: 20px;
+}
+
+ul{
+  padding-left: 40px;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 15px 40px;
+  font-size: 16px;
+  li{
+    padding-left: 36px;
+    position: relative;
+    line-height: 150%;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 0;
+      top: 0;
+      background-image: url(../img/check.svg);
+      background-size: 100% auto;
+      background-position: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .display1{
+    font-size: 40px;
+  }
+
+  .body-text{
+    font-size: 16px;
+  }
+
+  .body-text-big{
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 850px){
+  .display1{
+    font-size: 36px;
+  }
+
+  .display3{
+    font-size: 24px;
+  }
+
+  .body-text-big{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .display1{
+    font-size: 30px;
+  }
+
+  .body-text-big{
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .display1{
+    font-size: 24px;
+  }
+
+  .display3,
+  .display4{
+    font-size: 20px;
+  }
+}
