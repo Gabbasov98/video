@@ -9,6 +9,7 @@ function catalogSlider() {
             },
             768:{
                 spaceBetween: 30,
+                slidesPerView: "auto",
             },
             1280:{
                 slidesPerView: 4,

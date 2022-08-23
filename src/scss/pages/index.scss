@@ -96,6 +96,14 @@
 
 .why{
   padding: 50px 0 140px;
+  &__group{
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
+    .why__item{
+      margin-top: 30px;
+    }
+  }
   &__items{
     margin-top: 60px;
     display: grid;
@@ -111,6 +119,12 @@
     &--big{
       grid-column: 1/3;
       align-items: center;
+    }
+    &--grow{
+      flex-grow: 1;
+    }
+    &--pr24{
+      padding-right: 12px;
     }
   }
   &__icon{
@@ -359,6 +373,19 @@
   background-size: cover;
   background-position: center;
   color: #FFFFFF;
+  &::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/lines.png);
+    background-repeat: repeat-y;
+    background-position: center top;
+    pointer-events: none;
+    //z-index: -1;
+  }
   &--done{
     .footer-form{
       &__inner{
@@ -373,6 +400,7 @@
   }
   &:before{
     content: '';
+    z-index: 2;
     position: absolute;
     left: 0;
     top: 0;
@@ -623,6 +651,15 @@
     &__items{
       margin-top: 70px;
       grid-template-columns: 100%;
+    }
+    &__group{
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 30px;
+      margin: 0;
+      .why__item{
+        margin: 0;
+      }
     }
     &__item{
       align-items: center;
@@ -909,6 +946,9 @@
 
   .footer-form{
     padding: 50px 0 60px;
+    &:after{
+      display: none;
+    }
     &__camera{
       right: 16px;
       width: 90px;
@@ -1190,6 +1230,9 @@
     padding: 20px 0 40px;
     &__items{
       margin-top: 40px;
+      gap: 20px;
+    }
+    &__group{
       gap: 20px;
     }
     &__item{
