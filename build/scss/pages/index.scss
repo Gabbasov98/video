@@ -10,44 +10,24 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.58);
-    width: 100%;
+    background: linear-gradient(90deg, rgba(21, 37, 79, 0.8) 0%, rgba(21, 36, 75, 0) 93.6%);
+    width: 70%;
     height: 100%;
   }
 }
 
 .main{
-  padding: 142px 0 90px;
-  background-image: url(../img/main-bg3.webp);
+  padding: 142px 0 282px;
+  background-image: url(../img/main-bg.webp);
   color: #FFFFFF;
-  position: relative;
   &__inner{
-    //position: relative;
-    //z-index: 2;
-    width: 760px;
+    position: relative;
+    z-index: 2;
+    width: 600px;
     max-width: 100%;
   }
-  &__title{
-    text-transform: uppercase;
-    position: relative;
-    z-index: 2;
-  }
   &__list{
-    margin-top: 32px;
-    padding-left: 0;
-    font-size: 18px;
-    position: relative;
-    z-index: 2;
-  }
-  &__camera{
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  &__phone{
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    margin-top: 40px;
   }
 }
 
@@ -56,16 +36,17 @@
 }
 
 .main-form{
+  margin-top: -140px;
   position: relative;
   z-index: 3;
   color: #FFFFFF;
-  border-radius: 10px;
-  padding: 30px 57px;
-  background: $pattern;
-  margin-top: 38px;
+  &__inner{
+    border-radius: 10px;
+    padding: 40px 50px 50px;
+    background: $pattern;
+  }
   &__title{
     text-align: center;
-    font-size: 20px;
   }
   &__desc{
     display: flex;
@@ -79,21 +60,14 @@
     }
   }
   &__grid{
-    margin-top: 33px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
+    gap: 33px;
   }
   &__btn{
-    height: 45px;
-    font-size: 13px;
-  }
-  .form-group{
-    input{
-      height: 45px;
-      font-size: 12px;
-      padding: 0 22px;
-    }
+    height: 66px;
+    font-size: 18px;
   }
 }
 
@@ -576,19 +550,6 @@
   }
 }
 
-@media screen and (max-width: 1400px){
-  .main{
-    &__camera{
-      width: 304px;
-      height: auto;
-    }
-    &__phone{
-      height: 543px;
-      width: auto;
-    }
-  }
-}
-
 
 @media screen and (max-width: 1280px){
   .catalog{
@@ -647,29 +608,14 @@
 
 @media screen and (max-width: 1024px){
   .main{
-    padding: 0;
-    background-image: none;
-    .container{
-      padding: 0;
+    padding: 98px 0 177px;
+    &::before{
+      width: 100%;
+      background: linear-gradient(95.84deg, rgba(21, 37, 79, 0.75) 17.57%, rgba(28, 43, 82, 0.75) 54.68%, rgba(21, 36, 75, 0.75) 89.55%);
     }
     &__inner{
-      width: 100%;
-    }
-    &__content{
-      padding: 44px 12px 350px;
-      background-image: url(../img/main-bg3.webp);
-      background-size: cover;
-      background-position: center bottom;
-      position: relative;
-      &:before{
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        background: rgba(0, 0, 0, 0.65);
-        width: 100%;
-        height: 100%;
-      }
+      width: 770px;
+      margin: 0 auto;
     }
     &__title{
       text-align: center;
@@ -679,20 +625,10 @@
       padding: 0;
       font-size: 15px;
     }
-    &__phone{
-      height: 352px;
-      z-index: 2;
-    }
-    &__camera{
-      width: 100px;
-      top: unset;
-      bottom: 230px;
-    }
   }
 
   .main-form{
-    margin: 0;
-    border-radius: 0;
+    margin-top: -50px;
   }
 
   .who{
@@ -886,6 +822,7 @@
 
 @media screen and (max-width: 850px){
   .main{
+    padding: 61px 0 111px;
     &__list{
       margin-top: 30px;
       gap: 15px 20px;
@@ -1058,6 +995,7 @@
 
 @media screen and (max-width: 768px){
   .main{
+    padding: 50px 0 92px;
     &__list{
       margin-top: 15px;
       gap: 15px 30px;
@@ -1221,32 +1159,20 @@
 
 @media screen and (max-width: 576px){
   .main{
-    overflow: hidden;
+    padding: 28px 0 40px;
+    color: $black;
+    background: transparent;
     &::before{
       display: none;
     }
-    &__content{
-      background-image: url(../img/main-bg4.webp);
-      padding-bottom: 300px;
-    }
     &__list{
-      padding-left: 36px;
       margin-top: 20px;
       grid-template-columns: 100%;
-      gap: 8px;
-      font-size: 16px;
-    }
-    &__phone{
-      height: 300px;
-      right: -75px;
-    }
-    &__camera{
-      bottom: 185px;
     }
   }
 
   .main-mob{
-    //display: block;
+    display: block;
     background-image: url(../img/main-bg2.webp);
     text-align: center;
     padding: 53px 0 47px;
@@ -1281,23 +1207,12 @@
 
   .main-form{
     margin: 0;
-    padding: 38px 50px;
     &__inner{
       padding: 20px;
-    }
-    &__title{
-      font-size: 18px;
-    }
-    &__desc{
-      text-align: center;
-      svg{
-        display: none;
-      }
     }
     &__grid{
       grid-template-columns: 100%;
       margin-top: 20px;
-      gap: 11px;
     }
     &__btn{
       transform: unset;
